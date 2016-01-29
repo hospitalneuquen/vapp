@@ -20,8 +20,19 @@ cd myApps
 git clone https://github.com/hospitalneuquen/vapp.git
 ```
 
-3. Ejecutar la aplicación con npm o NodeMon.
-*NPM*
+3. Navegar hasta el nuevo directorio
+```bash
+cd vapp
+```
+
+4. Instalar dependencias
+```bash
+npm install
+```
+
+5. Ejecutar la aplicación con npm o [NodeMon](http://nodemon.io/) (recomendado para desarrollo)  
+
+  *NPM*
 ```bash
 npm start
 ```
@@ -29,5 +40,3 @@ npm start
 ```bash
 nodemon
 ```
-
-Se recomienda utilizar [NodeMon](http://nodemon.io/) para faciliar el desarrollo de las aplicaciones
