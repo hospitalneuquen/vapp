@@ -1,7 +1,7 @@
-Lib
+vApp
 ==========
 
-Aplicación virtual para routing de aplicaciones y APIs.
+Servidor web para routing de aplicaciones y APIs.
 
 Prerequisitos
 -----
