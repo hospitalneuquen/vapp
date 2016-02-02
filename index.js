@@ -11,5 +11,6 @@ app
     .use('/api/internacion', require('../api-internacion/app.js'))
     .use('/app/internacion', require('../app-internacion/app.js'))
     .listen(port, function() {
-        console.log('vApp running on port %d', port);
+        console.log();
+        console.log('vApp running on port %d on %s mode', port, app.get('env'));
     });
