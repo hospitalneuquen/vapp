@@ -1,23 +1,24 @@
 {
-    "name": "vapp",
-    "version": "1.0.0",
-    "description": "Servidor web para routing de aplicaciones y APIs",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js"
-    },
-    "author": "",
-    "license": "GNU",
-    "dependencies": {
-        "express": "^4.13.4"
-    },
-    "devDependencies": {},
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/hospitalneuquen/vapp.git"
-    },
-    "bugs": {
-        "url": "https://github.com/hospitalneuquen/vapp/issues"
-    },
-    "homepage": "https://github.com/hospitalneuquen/vapp#readme"
+  "name": "vapp",
+  "version": "1.0.0",
+  "description": "Servidor web para routing de aplicaciones y APIs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "GNU",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hospitalneuquen/vapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hospitalneuquen/vapp/issues"
+  },
+  "homepage": "https://github.com/hospitalneuquen/vapp#readme"
 }
