@@ -4,7 +4,9 @@ var express = require('express'),
 
 // Config app
 var port = 81;
-app.use('/lib', express.static(path.join(__dirname, '../Lib')))
+app
+    .use('/lib/css/fonts', express.static(path.join(__dirname, '../lib/css/dist/fonts'))) // temporal!!!!
+    .use('/lib', express.static(path.join(__dirname, '../lib')))
     .use('/auth', require('../auth/app.js'))
     .use('/api/internacion', require('../api-internacion/app.js'))
     .use('/app/internacion', require('../app-internacion/app.js'))
@@ -22,12 +24,13 @@ app.use(function(req, res, next) {
 // Error handler
 app.use(function(err, req, res, next) {
     // Parse err
+    var e;
     if (!isNaN(err)) {
-        var e = new Error(err == 400 ? "Parámetro incorrecto" : "No encontrado");
+        e = new Error(err == 400 ? "Parámetro incorrecto" : "No encontrado");
         e.status = err;
         err = e;
     } else if (typeof err == "string") {
-        var e = new Error(err);
+        e = new Error(err);
         e.status = 400;
         err = e;
     }
@@ -40,7 +43,7 @@ app.use(function(err, req, res, next) {
     };
 
     if (req.accepts('application/json'))
-        res.send(response)
+        res.send(response);
     else
         res.render('error', response);
 });
